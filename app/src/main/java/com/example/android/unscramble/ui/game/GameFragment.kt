@@ -89,17 +89,15 @@ class GameFragment : Fragment() {
      * Increases the word count.
      */
     private fun onSkipWord() {
-        /* currentScrambledWord = getNextScrambledWord()
-         currentWordCount++
-         binding.wordCount.text = getString(R.string.word_count, currentWordCount, MAX_NO_OF_WORDS)
-         setErrorTextField(false)
-         updateNextWordOnScreen()
-         */
+        if (viewModel.nextWord()) {
+            setErrorTextField(false)
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
+        }
     }
 
-    /*
-     * Gets a random word for the list of words and shuffles the letters in it.
-     */
+
     private fun getNextScrambledWord(): String {
         val tempWord = allWordsList.random().toCharArray()
         tempWord.shuffle()
