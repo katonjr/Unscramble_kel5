@@ -33,10 +33,6 @@ class GameFragment : Fragment() {
     private val viewModel: GameViewModel by viewModels()
 
 
-    private var score = 0
-    private var currentWordCount = 0
-    private var currentScrambledWord = "test"
-
 
     // Binding object instance with access to the views in the game_fragment.xml layout
     private lateinit var binding: GameFragmentBinding
@@ -65,7 +61,7 @@ class GameFragment : Fragment() {
         updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, 0)
         binding.wordCount.text = getString(
-                R.string.word_count, 0, MAX_NO_OF_WORDS)
+            R.string.word_count, 0, MAX_NO_OF_WORDS)
     }
 
     /*
@@ -88,12 +84,12 @@ class GameFragment : Fragment() {
      * Increases the word count.
      */
     private fun onSkipWord() {
-       /* currentScrambledWord = getNextScrambledWord()
-        currentWordCount++
-        binding.wordCount.text = getString(R.string.word_count, currentWordCount, MAX_NO_OF_WORDS)
-        setErrorTextField(false)
-        updateNextWordOnScreen()
-        */
+        /* currentScrambledWord = getNextScrambledWord()
+         currentWordCount++
+         binding.wordCount.text = getString(R.string.word_count, currentWordCount, MAX_NO_OF_WORDS)
+         setErrorTextField(false)
+         updateNextWordOnScreen()
+         */
     }
 
     /*
