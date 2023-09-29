@@ -68,6 +68,7 @@ val currentWordCount: LiveData<Int>
         getNextWord()
     }
 
+
 /*
     * Increases the game score if the player's word is correct.
     */
